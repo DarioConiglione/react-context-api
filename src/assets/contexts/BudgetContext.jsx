@@ -3,7 +3,6 @@ import { createContext, useState } from "react";
 const countContext = createContext();
 
 
-
 export function budgetProvider() {
 
     const [budgetMode, setBudgetMode] = useState(true)
@@ -14,10 +13,10 @@ export function budgetProvider() {
 
 
     return (
+        <>
 
-
-
-);
+        </>
+    );
 }
 
 export default countContext;
