@@ -5,7 +5,7 @@ import ChiSiamo from './pages/ChiSiamo';
 import Prodotti from './pages/Prodotti';
 import ProdottoSingolo from './pages/ProdottoSingolo';
 import DefaultLayout from './pages/DefaultLayout';
-import countContext from './assets/contexts/CountContext';
+import countContext from './assets/contexts/BudgetContext';
 
 function App() {
 
