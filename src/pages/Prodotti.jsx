@@ -6,8 +6,9 @@ import { useContext } from 'react';
 
 export default function Prodotti() {
 
-    /* const [prodotti, setProdotti] = useState([])
-
+    const { budgetMode } = useContext(Contesto)
+    const [prodotti, setProdotti] = useState([])
+    const prodottiBudget = budgetMode ? prodotti.filter(p => p.price <= 30) : prodotti;
 
     useEffect(() => {
         const api_products = 'https://fakestoreapi.com/products'
@@ -20,7 +21,7 @@ export default function Prodotti() {
                 console.error(error)
             });
     }, []
-    ) */
+    )
 
 
     return (
@@ -33,7 +34,7 @@ export default function Prodotti() {
                     <div className='row row-cols-1 row-cols-md-3'>
 
                         {
-                            prodotti.map((prodotto) => (
+                            prodottiBudget.map((prodotto) => (
                                 <div className='col d-flex mt-4'>
                                     <div className="card h-100 bg-light shadow-lg p-3">
                                         <img className="card-img-top w-50 mx-auto d-block" src={prodotto.image} alt="Title" />
