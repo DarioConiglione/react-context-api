@@ -1,13 +1,12 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ProdottoSingolo from './ProdottoSingolo';
-
+import Contesto from '../assets/contexts/BudgetContext';
+import { useContext } from 'react';
 
 export default function Prodotti() {
 
-    const [prodotti, setProdotti] = useState([])
-
+    /* const [prodotti, setProdotti] = useState([])
 
 
     useEffect(() => {
@@ -21,7 +20,7 @@ export default function Prodotti() {
                 console.error(error)
             });
     }, []
-    )
+    ) */
 
 
     return (

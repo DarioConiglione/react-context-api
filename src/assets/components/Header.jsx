@@ -17,7 +17,7 @@ export default function Header() {
                             <NavLink to="/ChiSiamo">Chi siamo</NavLink>
                             <NavLink to="/Prodotti">Prodotti</NavLink>
 
-                            <button onClick={handleMode}> Budget Mode </button>
+                            <button className="btn btn-success" onClick={handleMode}>Attiva Budget Mode </button>
                         </div>
 
                         {/*  <a className="navbar-brand" href="/">Homepage</a>
