@@ -15,6 +15,7 @@ function App() {
 
   function handleMode() {
     setBudgetMode(valore => !valore)
+    console.log(budgetMode);
   }
 
 
