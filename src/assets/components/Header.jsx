@@ -5,6 +5,7 @@ import { useContext } from "react";
 export default function Header() {
 
     const { handleMode } = useContext(Contesto)
+    const { budgetMode } = useContext(Contesto)
 
 
     return (
@@ -17,7 +18,7 @@ export default function Header() {
                             <NavLink to="/ChiSiamo">Chi siamo</NavLink>
                             <NavLink to="/Prodotti">Prodotti</NavLink>
 
-                            <button className="btn btn-success" onClick={handleMode}>Attiva Budget Mode </button>
+                            <button className="btn btn-success" onClick={handleMode}>{budgetMode ? "Disattiva Budget Mode" : "Attiva Budget Mode"}</button>
                         </div>
 
                         {/*  <a className="navbar-brand" href="/">Homepage</a>
