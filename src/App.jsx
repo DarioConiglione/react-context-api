@@ -1,18 +1,26 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from 'react';
 import HomePage from './pages/HomePage';
 import ChiSiamo from './pages/ChiSiamo';
 import Prodotti from './pages/Prodotti';
 import ProdottoSingolo from './pages/ProdottoSingolo';
 import DefaultLayout from './pages/DefaultLayout';
-import countContext from './assets/contexts/BudgetContext';
+import Contesto from './assets/contexts/BudgetContext';
+
 
 function App() {
+
+  const [budgetMode, setBudgetMode] = useState(true)
+
+  function handleMode() {
+    setBudgetMode(valore => !valore)
+  }
 
 
   return (
     <>
-      <countContext.Provider value={{}}>
+      <Contesto.Provider value={{ handleMode }}>
 
         <BrowserRouter>
           <Routes>
@@ -25,7 +33,7 @@ function App() {
           </Routes>
         </BrowserRouter>
 
-      </countContext.Provider>
+      </Contesto.Provider>
     </>
   )
 }

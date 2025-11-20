@@ -1,6 +1,10 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Contesto from "../contexts/BudgetContext";
+import { useContext } from "react";
+
 export default function Header() {
 
+    const { handleMode } = useContext(Contesto)
 
 
     return (
@@ -12,6 +16,8 @@ export default function Header() {
                             <NavLink to="/">Homepage</NavLink>
                             <NavLink to="/ChiSiamo">Chi siamo</NavLink>
                             <NavLink to="/Prodotti">Prodotti</NavLink>
+
+                            <button onClick={(e) => setBudgetMode(valore => !valore)}> Budget Mode </button>
                         </div>
 
                         {/*  <a className="navbar-brand" href="/">Homepage</a>

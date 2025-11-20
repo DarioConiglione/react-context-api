@@ -1,22 +1,5 @@
 import { createContext, useState } from "react";
 
-const countContext = createContext();
+const Contesto = createContext();
 
-
-export function budgetProvider() {
-
-    const [budgetMode, setBudgetMode] = useState(true)
-
-    function handleState() {
-        setBudgetMode(valore => !valore)
-    }
-
-
-    return (
-        <>
-
-        </>
-    );
-}
-
-export default countContext;
+export default Contesto;
